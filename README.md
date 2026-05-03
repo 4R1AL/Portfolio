@@ -19,16 +19,3 @@ This portfolio was built with a **"Less is More"** approach:
 * **CSS3:** Custom properties (variables), Flexbox, and Grid for a modern layout.
 * **JavaScript:** Vanilla JS for the dynamic year footer and responsive mobile menu toggles.
 * **Icons:** Font Awesome (Light/Pro style) for a premium look.
-
----
-
-## 📂 Project Structure
-.
-├── assets/
-│   ├── images/        # Project and UI/UX gallery assets
-│   └── favicon.png    # Site favicon
-├── scripts/
-│   └── script.js            # Main JS (Navbar, Animations, Footer Year)
-├── styles/
-│   └── style.css           # Custom CSS with human-readable formatting
-└── index.html               # Main portfolio structure
