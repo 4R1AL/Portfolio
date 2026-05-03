@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrat Nagarkoti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  </head>
+
+  <body>
+
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+    <nav>
+
+      <div class="nav-inner">
+
+        <a href="#" class="logo">Samrat Nagarkoti</a>
+
+        <div class="nav-right">
+
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <button
+            class="ham"
+            id="ham"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>   <!-- ☰ the menu icon -->
+            <i class="fa-solid fa-xmark"></i>  <!-- ✕ the close icon -->
+          </button>
+
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+          <a href="#about" onclick="closeMenu()"><i class="fa-regular fa-user"></i>About</a>
+          <a href="#skills" onclick="closeMenu()"><i class="fa-solid fa-code"></i>Skills</a>
+          <a href="#projects" onclick="closeMenu()"><i class="fa-solid fa-layer-group"></i>Projects</a>
+          <a href="#contact" onclick="closeMenu()"><i class="fa-regular fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+
+    </nav>
+
+
+    <!-- ============================================================
+         MAIN CONTENT
+    ============================================================ -->
+    <main>
+
+      <!-- ── HERO ─────────────────────────────────────────────── -->
+      <div class="hero">
+        <h1>
+            Building things,<br><em>learning always.</em>
+        </h1>
+        <p>
+          CS student based in Nepal. I write code, break things to learn, 
+          and am currently exploring visual arts,
+          also you can catch me gaming in my downtime.
+        </p>
+        <div class="hero-links">
+          <a href="#projects">Projects →</a>
+          <a href="#contact">Get in touch →</a>
+        </div>
+      </div>
+
+
+      <!-- ── ABOUT ─────────────────────────────────────────────── -->
+      <section id="about">
+        <p class="sec-label rv">/ About</p>
+
+        <div class="about">
+          <p class="rv">
+            I'm <strong>Samrat Nagarkoti</strong>, an A Level Computer Science
+            student in Nepal. I'm on my CS journey —
+            diving deep into algorithms, data structures, and how software
+            actually works.
+          </p>
+          <p class="rv" style="transition-delay: .1s">
+            For me, programming is a craft. I care about writing clean, readable
+            code and understanding the logic behind every decision.
+            Every bug is a chance to learn something new.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- ── SKILLS ─────────────────────────────────────────────── -->
+      <section id="skills">
+        <p class="sec-label rv">/ Skills</p>
+
+        <div class="skills-grid">
+          <span class="skill rv">Python</span>
+          <span class="skill rv" style="transition-delay: .05s">HTML & CSS</span>
+          <span class="skill rv" style="transition-delay: .10s">JavaScript</span>
+          <span class="skill rv" style="transition-delay: .10s">Java</span>
+          <span class="skill rv" style="transition-delay: .10s">C</span>
+          <span class="skill rv" style="transition-delay: .15s">Algorithms</span>
+          <span class="skill rv" style="transition-delay: .20s">Data Structures</span>
+          <span class="skill rv" style="transition-delay: .25s">Pseudocode</span>
+          <span class="skill rv" style="transition-delay: .30s">SQL</span>
+          <span class="skill rv" style="transition-delay: .35s">Git</span>
+          <span class="skill rv" style="transition-delay: .40s">Logic Gates</span>
+          <span class="skill rv" style="transition-delay: .40s">Visual Arts</span>
+        </div>
+      </section>
+
+
+      <!-- ── PROJECTS ───────────────────────────────────────────── -->
+
+      <section id="projects">
+        <p class="sec-label rv">/ Projects</p>    
+
+        <div class="project rv" style="transition-delay: .2s">
+          <div class="project-top">
+            <div class="project-name">This Portfolio</div>
+            <a href="https://github.com/4R1AL/Portfolio" class="project-link">View ↗</a>
+          </div>
+          <p>Hand-coded from scratch — no frameworks, just HTML, CSS, and a bit of restraint.</p>
+          <div class="project-tags">
+            <span class="tag">html</span>
+            <span class="tag">css</span>
+            <span class="tag">javascript</span>
+          </div>
+        </div>
+
+        <div class="project rv" style="transition-delay: .2s">
+          <div class="project-top">
+            <div class="project-name">Swing plugin</div>
+            <a href="https://github.com/4R1AL/Swing-Plugin" class="project-link">View ↗</a>
+          </div>
+          <p>Developed a fully interactive, physics-compliant playground swing for Minecraft.</p>
+          <div class="project-tags">
+            <span class="tag">java</span>
+            <span class="tag">bukkit api</span>
+            <span class="tag">ai</span>
+            <span class="tag">physics simulation</span>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ── CONTACT ───────────────────────────────────────────── -->
+      <section id="contact">
+        <p class="sec-label rv">/ Contact</p>
+        <p class="rv" style="transition-delay: .05s">
+          I'm always happy to connect — whether it's about CS,
+          projects, or just a conversation about tech.
+        </p>
+        <div class="contact-links rv" style="transition-delay: .1s"><br>
+          <a href="mailto:samratnagarkoti6@email.com">
+            <span>Email</span>samratnagarkoti6@gmail.com
+          </a>
+          <a href="https://github.com/4R1AL" target="_blank">
+            <span>GitHub</span>https://github.com/4R1AL
+          </a> 
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+    <footer>
+      <p>Samrat Nagarkoti — Kathmandu, Nepal 🇳🇵 </p>
+      <p>© <span id="year"></span> All Rights Reserved</p>
+    </footer>
+
+
+    <!--scripts -->
+    <script src="assets/scripts/script.js"></script>
+
+  </body>
+</html>
