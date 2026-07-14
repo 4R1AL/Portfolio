@@ -1,6 +1,6 @@
 # Samrat's Portfolio
 
-A clean, responsive, and high-performance portfolio website built to showcase the intersection of **Computer Science** logic and **UI/UX Visual Arts**.
+A clean, responsive portfolio website built to showcase the intersection of **Computer Science** logic and **UI/UX Visual Arts**.
 
 Based in Kathmandu, Nepal, this project represents my journey as an A-Level CS student—breaking things, building them back up, and considering every pixel.
 
