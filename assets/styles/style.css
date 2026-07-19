@@ -15,8 +15,20 @@
     --sans: 'Inter', sans-serif;
 }
 
+body.dark-theme {
+    --bg: #060b14;
+    --text: #f4f7fb;
+    --muted: #95a7c2;
+    --border: #1b2738;
+}
+
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: clamp(84px, 10vw, 110px);
+}
+
+section {
+    scroll-margin-top: clamp(84px, 10vw, 110px);
 }
 
 body {
@@ -39,6 +51,7 @@ nav {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     animation: navDrop 0.5s ease both;
+    backdrop-filter: blur(8px);
 }
 
 .nav-inner {
@@ -63,7 +76,48 @@ nav {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(17, 17, 17, 0.05);
+}
+
+body.dark-theme .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .hero h1 em,
+body.dark-theme .sec-label,
+body.dark-theme .project-name,
+body.dark-theme .tag {
+    color: #8fb8ff;
+}
+
+body.dark-theme .skill,
+body.dark-theme .tag,
+body.dark-theme .project {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .nav-links {
@@ -169,7 +223,7 @@ nav {
 }
 
 .mobile-menu.open {
-    max-height: 240px;
+    max-height: 320px;
     border-bottom-color: var(--border);
 }
 
@@ -212,6 +266,7 @@ nav {
 .mobile-menu.open a:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.10s; }
 .mobile-menu.open a:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.15s; }
 .mobile-menu.open a:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.20s; }
+.mobile-menu.open a:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.25s; }
 
 /* ----------------------------------------------------------------
     HERO SECTION
@@ -325,10 +380,10 @@ section:last-child {
 
 .skill {
     font-size: 0.8rem;
-    padding: 0.35rem 0.85rem;
+    padding: 0.5rem 0.95rem;
     border: 1px solid var(--border);
     color: var(--muted);
-    border-radius: 2px;
+    border-radius: 6px;
     transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
@@ -344,11 +399,10 @@ section:last-child {
 
 .project {
     padding: 2rem 0;
-    border-top: 1px solid var(--border);
+    transition: all 0.2s ease;
 }
 
 .project:first-of-type {
-    border-top: none;
     padding-top: 0;
 }
 
@@ -412,7 +466,11 @@ section:last-child {
 
 .tag {
     font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--border);
     color: var(--muted);
+    border-radius: 6px;
+    transition: border-color 0.2s, color 0.2s;
 }
 
 .tag::before {
@@ -457,6 +515,19 @@ section:last-child {
 .contact-links a:hover {
     gap: 1.1rem;
     color: var(--muted);
+}
+
+.copy-on-click {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.copy-on-click:hover {
+    color: var(--text) !important;
+}
+
+.copy-on-click.copied {
+    color: #4caf50;
 }
 
 /* ----------------------------------------------------------------

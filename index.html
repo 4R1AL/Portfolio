@@ -29,18 +29,30 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#arts">Arts</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
 
-          <button
-            class="ham"
-            id="ham"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <i class="fa-solid fa-bars"></i>   <!-- ☰ the menu icon -->
-            <i class="fa-solid fa-xmark"></i>  <!-- ✕ the close icon -->
-          </button>
+          <div class="nav-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+              title="Toggle midnight theme"
+            >
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button
+              class="ham"
+              id="ham"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars"></i>   <!-- ☰ the menu icon -->
+              <i class="fa-solid fa-xmark"></i>  <!-- ✕ the close icon -->
+            </button>
+          </div>
 
         </div>
       </div>
@@ -50,6 +62,7 @@
           <a href="#about" onclick="closeMenu()"><i class="fa-regular fa-user"></i>About</a>
           <a href="#skills" onclick="closeMenu()"><i class="fa-solid fa-code"></i>Skills</a>
           <a href="#projects" onclick="closeMenu()"><i class="fa-solid fa-layer-group"></i>Projects</a>
+          <a href="#arts" onclick="closeMenu()"><i class="fa-solid fa-paint-brush"></i>Arts</a>
           <a href="#contact" onclick="closeMenu()"><i class="fa-regular fa-envelope"></i> Contact</a>
         </div>
       </div>
@@ -65,12 +78,11 @@
       <!-- ── HERO ─────────────────────────────────────────────── -->
       <div class="hero">
         <h1>
-            Building things,<br><em>learning always.</em>
+           Hello, I am<br><em>Samrat Nagarkoti</em>
         </h1>
         <p>
-          CS student based in Nepal. I write code, break things to learn, 
-          and am currently exploring visual arts,
-          also you can catch me gaming in my downtime.
+          CS student based on Nepal who loves building things with code and exploring how technology works. Outside of coding, I enjoy visual art, side projects, and gaming.
+
         </p>
         <div class="hero-links">
           <a href="#projects">Projects →</a>
@@ -91,9 +103,9 @@
             actually works.
           </p>
           <p class="rv" style="transition-delay: .1s">
-            For me, programming is a craft. I care about writing clean, readable
-            code and understanding the logic behind every decision.
-            Every bug is a chance to learn something new.
+           Programming is a craft for me. I like writing clean,
+           readable code and I want to understand the reason behind every 
+           decision. Every bug is an opportunity to learn something new. 
           </p>
         </div>
       </section>
@@ -109,12 +121,7 @@
           <span class="skill rv" style="transition-delay: .10s">JavaScript</span>
           <span class="skill rv" style="transition-delay: .10s">Java</span>
           <span class="skill rv" style="transition-delay: .10s">C</span>
-          <span class="skill rv" style="transition-delay: .15s">Algorithms</span>
-          <span class="skill rv" style="transition-delay: .20s">Data Structures</span>
-          <span class="skill rv" style="transition-delay: .25s">Pseudocode</span>
-          <span class="skill rv" style="transition-delay: .30s">SQL</span>
-          <span class="skill rv" style="transition-delay: .35s">Git</span>
-          <span class="skill rv" style="transition-delay: .40s">Logic Gates</span>
+          <span class="skill rv" style="transition-delay: .30s">MySQL</span>
           <span class="skill rv" style="transition-delay: .40s">Visual Arts</span>
         </div>
       </section>
@@ -137,19 +144,19 @@
             <span class="tag">javascript</span>
           </div>
         </div>
+        
 
-        <div class="project rv" style="transition-delay: .2s">
-          <div class="project-top">
-            <div class="project-name">Swing plugin</div>
-            <a href="https://github.com/4R1AL/Swing-Plugin" class="project-link">View <i class="fa-solid fa-arrow-pointer"></i></a>
-          </div>
-          <p>Developed a fully interactive, physics-compliant playground swing for Minecraft.</p>
-          <div class="project-tags">
-            <span class="tag">java</span>
-            <span class="tag">bukkit api</span>
-            <span class="tag">ai</span>
-            <span class="tag">physics simulation</span>
-          </div>
+      </section>
+
+
+      <!-- ── ARTS ───────────────────────────────────────────── -->
+      <section id="arts">
+        <p class="sec-label rv">/ ARTS</p>
+
+        <div class="about rv" style="transition-delay: .05s">
+          <p>
+            This section will soon have my arts, my sketches and other things I have worked on.
+          </p>
         </div>
 
       </section>
@@ -159,16 +166,22 @@
       <section id="contact">
         <p class="sec-label rv">/ Contact</p>
         <p class="rv" style="transition-delay: .05s">
-          I'm always happy to connect — whether it's about CS,
-          projects, or just a conversation about tech.
+          I'm always happy to connect—whether it's about CS, projects, 
+          or tech.
         </p>
         <div class="contact-links rv" style="transition-delay: .1s"><br>
-          <a href="mailto:samratnagarkoti6@email.com">
-            <span>Email</span>samratnagarkoti6@gmail.com
+          <a href="mailto:samratnagarkoti10@gmail.com">
+            <span>Email</span>samratnagarkoti10@gmail.com
           </a>
           <a href="https://github.com/4R1AL" target="_blank">
             <span>GitHub</span>https://github.com/4R1AL
           </a> 
+          <a href="https://discord.com/app" target="_blank" class="copy-on-click" data-copy="ah_duo">
+            <span>Discord</span>ah_duo
+          </a> 
+          <a href="https://www.instagram.com/samrxt.n" target="_blank">
+            <span>Instagram</span>@samrxt.n
+          </a>
         </div>
       </section>
 
