@@ -16,3 +16,4 @@ This portfolio was built with a **"Less is More"** approach:
 * **CSS3:** Custom properties (variables), Flexbox, and Grid for a modern layout.
 * **JavaScript:** Vanilla JS for the dynamic year footer and responsive mobile menu toggles.
 * **Icons:** Font Awesome (Light/Pro style) for a premium look.
+# Portfolio-v2
