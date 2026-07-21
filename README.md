@@ -1,4 +1,4 @@
-# Samrat's Portfolio
+# My Portfolio
 
 A clean, responsive portfolio website
 
