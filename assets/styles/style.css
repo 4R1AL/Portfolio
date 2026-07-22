@@ -7,6 +7,17 @@
 }
 
 :root {
+    /* Dark mode */
+    --bg: #060b14;
+    --text: #f4f7fb;
+    --muted: #95a7c2;
+    --border: #1b2738;
+    --serif: 'Instrument Serif', serif;
+    --sans: 'Inter', sans-serif;
+}
+
+/* Original light theme values for restoration.
+:root {
     --bg: #fafaf8;
     --text: #111;
     --muted: #888;
@@ -14,6 +25,7 @@
     --serif: 'Instrument Serif', serif;
     --sans: 'Inter', sans-serif;
 }
+*/
 
 body.dark-theme {
     --bg: #060b14;
@@ -55,13 +67,13 @@ nav {
 }
 
 .nav-inner {
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.9rem 2rem;
-    gap: 1rem;
+    gap: 1.15rem;
 }
 
 .logo {
@@ -122,7 +134,7 @@ body.dark-theme .project {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.35rem;
     list-style: none;
 }
 
@@ -135,6 +147,10 @@ body.dark-theme .project {
 .nav-links li:nth-child(2) { animation-delay: 0.25s; }
 .nav-links li:nth-child(3) { animation-delay: 0.35s; }
 .nav-links li:nth-child(4) { animation-delay: 0.45s; }
+.nav-links li:nth-child(5) { animation-delay: 0.55s; }
+.nav-links li:nth-child(6) { animation-delay: 0.65s; }
+.nav-links li:nth-child(7) { animation-delay: 0.75s; }
+.nav-links li:nth-child(8) { animation-delay: 0.85s; }
 
 .nav-links a {
     color: var(--muted);
@@ -223,22 +239,23 @@ body.dark-theme .project {
 }
 
 .mobile-menu.open {
-    max-height: 320px;
+    max-height: calc(100vh - 90px);
     border-bottom-color: var(--border);
 }
 
 .mobile-menu-inner {
     display: flex;
     flex-direction: column;
-    padding: 0.4rem 1.25rem 1rem;
+    padding: 0.4rem 1.25rem 3.5rem;
+    box-sizing: border-box;
 }
 
 .mobile-menu a {
-    padding: 0.7rem 0;
+    padding: 0.9rem 0;
     border-bottom: 1px solid var(--border);
     color: var(--text);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -256,6 +273,7 @@ body.dark-theme .project {
 
 .mobile-menu a:last-child {
     border-bottom: none;
+    padding-bottom: 1rem;
 }
 
 .mobile-menu a:hover {
@@ -267,6 +285,9 @@ body.dark-theme .project {
 .mobile-menu.open a:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.15s; }
 .mobile-menu.open a:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.20s; }
 .mobile-menu.open a:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.25s; }
+.mobile-menu.open a:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.30s; }
+.mobile-menu.open a:nth-child(7) { opacity: 1; transform: none; transition-delay: 0.35s; }
+.mobile-menu.open a:nth-child(8) { opacity: 1; transform: none; transition-delay: 0.40s; }
 
 /* ----------------------------------------------------------------
     HERO SECTION
@@ -287,7 +308,7 @@ body.dark-theme .project {
 }
 
 .hero h1 em {
-    font-style: italic;
+    font-style: normal;
     color: var(--muted);
 }
 
@@ -464,6 +485,70 @@ section:last-child {
     gap: 0.5rem;
 }
 
+.activities-grid {
+    margin-top: 1.25rem;
+}
+
+.activity-card {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.activity-card + .activity-card {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.activity-card-top {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    color: #8fb8ff;
+    font-size: 1rem;
+    border: none;
+}
+
+.activity-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.1rem;
+}
+
+.activity-subtitle {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.activity-card p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.section-intro {
+    max-width: 640px;
+    color: var(--muted);
+    margin-top: 0.7rem;
+    margin-bottom: 1.35rem;
+    font-size: 0.95rem;
+}
+
 .tag {
     font-size: 0.72rem;
     padding: 0.35rem 0.7rem;
@@ -481,12 +566,20 @@ section:last-child {
     CONTACT SECTION
 ---------------------------------------------------------------- */
 
+section#contact {
+    padding: 2.5rem 0 4rem !important;
+}
+
 .contact p {
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.8;
     max-width: 420px;
     margin-bottom: 1.5rem;
+}
+
+footer {
+    margin-top: 1.5rem;
 }
 
 .contact-links {
@@ -523,7 +616,7 @@ section:last-child {
 }
 
 .copy-on-click:hover {
-    color: var(--text) !important;
+    color: var(--muted) !important;
 }
 
 .copy-on-click.copied {

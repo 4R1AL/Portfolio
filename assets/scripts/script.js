@@ -1,6 +1,5 @@
 const ham  = document.getElementById('ham');
 const menu = document.getElementById('mobileMenu');
-const themeToggle = document.getElementById('themeToggle');
 
 ham.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
@@ -8,26 +7,7 @@ ham.addEventListener('click', () => {
     ham.setAttribute('aria-expanded', isOpen);
 });
 
-if (themeToggle) {
-    const savedTheme = localStorage.getItem('portfolio-theme');
-    const shouldUseDark = !savedTheme || savedTheme === 'dark';
-    
-    if (shouldUseDark) {
-        document.body.classList.add('dark-theme');
-        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    } else {
-        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    }
-
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        const isDark = document.body.classList.contains('dark-theme');
-        localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
-        themeToggle.innerHTML = isDark
-            ? '<i class="fa-solid fa-sun"></i>'
-            : '<i class="fa-solid fa-moon"></i>';
-    });
-}
+document.body.classList.add('dark-theme');
 
 function closeMenu() {
     menu.classList.remove('open');
