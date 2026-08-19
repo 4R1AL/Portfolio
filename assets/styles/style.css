@@ -8,6 +8,7 @@
 
 :root {
     /* Dark mode */
+    color-scheme: dark;
     --bg: #060b14;
     --text: #f4f7fb;
     --muted: #95a7c2;
@@ -44,12 +45,27 @@ section {
 }
 
 body {
+    background-color: var(--bg);
     background: var(--bg);
     color: var(--text);
+    color-scheme: dark;
     font-family: var(--sans);
     font-size: 15px;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+body,
+body * {
+    color: inherit;
+}
+
+body.dark-theme a,
+body.dark-theme button,
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    color: var(--text);
 }
 
 /* ----------------------------------------------------------------
